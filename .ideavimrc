@@ -1,0 +1,78 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+let mapleader ="\<SPACE>"
+
+" 开启某些功能
+set ignorecase smartcase
+set NERDTree
+set hlsearch
+set showmode
+set scrolloff=5
+set history=1000
+set surround
+set incsearch
+set relativenumber
+set number
+set smartcase
+set visualbell
+set noerrorbells
+set easymotion
+set commentary
+set ideajoin
+set exchange
+set multiple-cursors
+set sneak
+
+" 退出
+nmap <Leader>q :quit<CR>
+
+" 不同窗口之间的移动
+nmap <Leader>ll <C-W>l<CR>
+nmap <Leader>jj <C-W>j<CR>
+nmap <Leader>hh <C-W>h<CR>
+nmap <Leader>kk <C-W>k<CR>
+
+" 分割窗口
+nmap <Leader>vs :vsplit<CR>
+nmap <Leader>s :split<CR>
+
+" 隐藏panels
+nmap <Leader>haw :action HideAllWindows<CR>
+
+" 进入无干扰模式
+nmap <Leader>df :action ToggleDistractionFreeMode<CR>
+
+map <C-b> :NERDTreeToggle<CR>
+
+" 标签页之间的切换
+nmap <A-,> :action PreviousTab<CR>
+nmap <A-.> :action NextTab<CR>
+
+" 标签页列表
+nmap <Leader>be :action Switcher<CR>
+
